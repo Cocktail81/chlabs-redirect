@@ -9,8 +9,8 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: system-ui, -apple-system, sans-serif;
-      background: #f9f9f8;
-      color: #1a1a19;
+      background: #0d1b2a;
+      color: #e8f4f3;
       min-height: 100vh;
       display: flex;
       align-items: center;
@@ -22,35 +22,53 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      position: relative;
-      max-width: 520px;
+      max-width: 480px;
       width: 100%;
+      position: relative;
     }
-    .logo-mark {
-      width: 64px; height: 64px;
-      border-radius: 16px;
-      background: #fff;
-      border: 1px solid #e0dfd9;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    /* Soft background glows */
+    .container::before, .container::after {
+      content: '';
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .container::before {
+      width: 400px; height: 400px;
+      background: #1a6e6e;
+      opacity: 0.2;
+      top: -100px; right: -80px;
+    }
+    .container::after {
+      width: 280px; height: 280px;
+      background: #0f4f6e;
+      opacity: 0.18;
+      bottom: -80px; left: -60px;
+    }
+    .logo {
+      width: 88px; height: 88px;
+      border-radius: 20px;
+      object-fit: cover;
       margin-bottom: 1.5rem;
-      font-size: 20px;
-      font-weight: 600;
-      letter-spacing: -1px;
+      position: relative;
+      z-index: 1;
     }
     .badge {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: #e6f1fb;
-      color: #185fa5;
+      background: rgba(32, 210, 185, 0.12);
+      color: #20d2b9;
       font-size: 12px;
       font-weight: 500;
-      padding: 4px 12px;
+      padding: 4px 14px;
       border-radius: 99px;
       margin-bottom: 1.25rem;
-      border: 1px solid #b5d4f4;
+      border: 1px solid rgba(32, 210, 185, 0.3);
+      position: relative;
+      z-index: 1;
     }
     h1 {
       font-size: 28px;
@@ -58,72 +76,75 @@
       line-height: 1.3;
       letter-spacing: -0.3px;
       margin-bottom: 0.75rem;
+      position: relative;
+      z-index: 1;
     }
     .subtext {
       font-size: 15px;
-      color: #666;
+      color: #7a9ea8;
       line-height: 1.6;
-      max-width: 360px;
+      max-width: 340px;
       margin-bottom: 2rem;
-    }
-    .btn-group {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      justify-content: center;
+      position: relative;
+      z-index: 1;
     }
     .btn-primary {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 10px 22px;
-      background: #1a1a19;
-      color: #fff;
+      padding: 11px 26px;
+      background: #20d2b9;
+      color: #0d1b2a;
       text-decoration: none;
       border-radius: 8px;
       font-size: 15px;
-      font-weight: 500;
+      font-weight: 600;
+      position: relative;
+      z-index: 1;
+      transition: opacity 0.15s;
     }
-    .btn-primary:hover { opacity: 0.85; }
+    .btn-primary:hover { opacity: 0.88; }
     hr {
       width: 100%;
       border: none;
-      border-top: 1px solid #e0dfd9;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
       margin: 2.5rem 0;
+      position: relative;
+      z-index: 1;
     }
     .meta {
       display: flex;
       align-items: center;
       gap: 8px;
       font-size: 13px;
-      color: #999;
+      color: #4a6a75;
+      position: relative;
+      z-index: 1;
     }
-    .dot { width: 4px; height: 4px; border-radius: 50%; background: #ccc; }
+    .dot { width: 3px; height: 3px; border-radius: 50%; background: #2a4a55; }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="logo-mark">CHL</div>
+    <img class="logo" src="Logo_1_Cropped.png" alt="CH Labs logo" />
 
     <div class="badge">
       <i class="ti ti-info-circle" style="font-size:13px;"></i>
       We've moved
     </div>
 
-    <h1>CHL has a new home</h1>
+    <h1>CHLabs has a new home</h1>
     <p class="subtext">Our site has moved to a new location. Head over to find everything you're looking for.</p>
 
-    <div class="btn-group">
-      <a class="btn-primary" href="https://chlabs.online">
-        Visit chlabs.online
-        <i class="ti ti-arrow-right" style="font-size:16px;"></i>
-      </a>
-    </div>
+    <a class="btn-primary" href="https://chlabs.online">
+      Visit chlabs.online
+      <i class="ti ti-arrow-right" style="font-size:16px;"></i>
+    </a>
 
     <hr>
 
     <div class="meta">
-      <span>CHL</span>
+      <span>CHLabs</span>
       <div class="dot"></div>
       <span>chlabs.online</span>
       <div class="dot"></div>
