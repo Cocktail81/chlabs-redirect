@@ -1,38 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CH Labs</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 100px auto;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 12px 24px;
-            background: #2563eb;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 18px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CH Labs</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.x/dist/tabler-icons.min.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #f9f9f8;
+      color: #1a1a19;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      max-width: 520px;
+      width: 100%;
+    }
+    .logo-mark {
+      width: 64px; height: 64px;
+      border-radius: 16px;
+      background: #fff;
+      border: 1px solid #e0dfd9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -1px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #e6f1fb;
+      color: #185fa5;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 4px 12px;
+      border-radius: 99px;
+      margin-bottom: 1.25rem;
+      border: 1px solid #b5d4f4;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.3;
+      letter-spacing: -0.3px;
+      margin-bottom: 0.75rem;
+    }
+    .subtext {
+      font-size: 15px;
+      color: #666;
+      line-height: 1.6;
+      max-width: 360px;
+      margin-bottom: 2rem;
+    }
+    .btn-group {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      background: #1a1a19;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 500;
+    }
+    .btn-primary:hover { opacity: 0.85; }
+    hr {
+      width: 100%;
+      border: none;
+      border-top: 1px solid #e0dfd9;
+      margin: 2.5rem 0;
+    }
+    .meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: #999;
+    }
+    .dot { width: 4px; height: 4px; border-radius: 50%; background: #ccc; }
+  </style>
 </head>
 <body>
-    <h1>CH Labs</h1>
+  <div class="container">
+    <div class="logo-mark">CHL</div>
 
-    <p>
-        This site has moved to the new location.
-    </p>
+    <div class="badge">
+      <i class="ti ti-info-circle" style="font-size:13px;"></i>
+      We've moved
+    </div>
 
-    <a class="button" href="https://chlabs.online">
+    <h1>CHL has a new home</h1>
+    <p class="subtext">Our site has moved to a new location. Head over to find everything you're looking for.</p>
+
+    <div class="btn-group">
+      <a class="btn-primary" href="https://chlabs.online">
         Visit chlabs.online
-    </a>
+        <i class="ti ti-arrow-right" style="font-size:16px;"></i>
+      </a>
+    </div>
+
+    <hr>
+
+    <div class="meta">
+      <span>CHL</span>
+      <div class="dot"></div>
+      <span>chlabs.online</span>
+      <div class="dot"></div>
+      <span>Page moved</span>
+    </div>
+  </div>
 </body>
 </html>
